@@ -1,0 +1,111 @@
+/* Ensure the chat container takes up the entire screen */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Make the chat box flexible and scrollable */
+  .chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style messages as bubbles */
+  .chat-message {
+    max-width: 70%;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #d9d9d9;
+    word-wrap: break-word;
+    align-self: flex-start;
+  }
+  
+  /* Differentiate between user's and other messages */
+  .my-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .other-message {
+    background-color: #e1e1e1;
+    color: black;
+    align-self: flex-start;
+  }
+  
+  /* Style the input area */
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Style individual input fields */
+  .input-name{
+    width: 20%;
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .input-message {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60%;
+  }
+  
+  .send-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 7%;
+    margin-left: 10px;
+  }
+  
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .chat-container {
+      height: 95vh;
+    }
+  
+    .input-message {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .input-name{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .send-button{
+        width: 5%;
+        margin-bottom: 10px;
+    }
+  
+    .send-button {
+      flex: 1;
+    }
+  }
+  
